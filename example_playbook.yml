@@ -1,0 +1,9 @@
+---
+- hosts: localhost
+  tasks:
+    - shell: dmesg
+      register: dmesgout
+    - debug: msg="{{ dmesgout.stdout }}"
+
+    - shell: ls /notexistingfile
+      ignore_errors: true
