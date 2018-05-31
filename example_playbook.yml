@@ -1,7 +1,7 @@
 ---
 - hosts: localhost
   tasks:
-    - shell: dmesg
+    - shell: dmesg|tail -n5|cut -c -70
       register: dmesgout
     - debug: msg="{{ dmesgout.stdout }}"
 
