@@ -1,9 +1,9 @@
-=Shell / Command output callback=
+# Shell / Command output callback for Ansible
 
 This python script is an Ansible callback you can use to get a decent output of
 commands run by your playbooks.
 
-==Setup==
+## Setup
 Edit your `/etc/ansible/ansible.cfg`:
 * `callback_whitelist = cleanoutput`
 * `stdout_callback = cleanoutput`
@@ -12,6 +12,6 @@ Edit your `/etc/ansible/ansible.cfg`:
 Copy the script to your callbacks folder:
 * `cp cleanoutput.py /your/callbacks/folder/`
 
-==Example==
+## Example
 
 ```ansible-playbook -i 'localhost,' -c local example_playbook.yml ```
